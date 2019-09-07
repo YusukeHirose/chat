@@ -10,3 +10,9 @@ type User struct {
 	Password  string
 	CreatedAt time.Time
 }
+
+func UserByEmail(email string) (user User, err error) {
+	user = User{}
+	// TODO emailで検索
+	return
+}
