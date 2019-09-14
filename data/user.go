@@ -29,3 +29,8 @@ func (user *User) CreateSession() (session Session, err error) {
 	// TODO DB処理
 	return
 }
+
+func (session *Session) Check() (valid bool, err error) {
+	// TODO DB処理
+	return
+}

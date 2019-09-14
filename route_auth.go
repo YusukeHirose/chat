@@ -16,7 +16,7 @@ func authenticate(writer http.ResponseWriter, request *http.Request) {
 		log.Fatal(err, "Cannot create session")
 	}
 	if user.Password == data.Encrypt(request.PostFormValue("password")) {
-		session := user.CreateSession()
+		session, _ := user.CreateSession()
 		cookie := http.Cookie{
 			Name:     "_cookie",
 			Value:    session.Uuid,
