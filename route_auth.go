@@ -6,6 +6,10 @@ import (
 	"net/http"
 )
 
+func signup(writer http.ResponseWriter, request *http.Request) {
+	generateHTML(writer, nil, "login.layout", "pubic.navbar", "signup")
+}
+
 func authenticate(writer http.ResponseWriter, request *http.Request) {
 	err := request.ParseForm()
 	if err != nil {
