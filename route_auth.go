@@ -10,6 +10,21 @@ func signup(writer http.ResponseWriter, request *http.Request) {
 	generateHTML(writer, nil, "login.layout", "public.navbar", "signup")
 }
 
+func signupAccount(writer http.ResponseWriter, request *http.Request) {
+	err := request.ParseForm()
+	if err != nil {
+		log.Fatal(err, "Cannot parse form")
+	}
+	user := data.User{
+		Name:     request.PostFormValue("name"),
+		Email:    request.PostFormValue("email"),
+		Password: request.PostFormValue("password"),
+	}
+	log.Printf(user.Name)
+	// TODO user作成
+	http.Redirect(writer, request, "/login", 302)
+}
+
 func authenticate(writer http.ResponseWriter, request *http.Request) {
 	err := request.ParseForm()
 	if err != nil {
