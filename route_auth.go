@@ -7,7 +7,7 @@ import (
 )
 
 func signup(writer http.ResponseWriter, request *http.Request) {
-	generateHTML(writer, nil, "login.layout", "pubic.navbar", "signup")
+	generateHTML(writer, nil, "login.layout", "public.navbar", "signup")
 }
 
 func authenticate(writer http.ResponseWriter, request *http.Request) {
