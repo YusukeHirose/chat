@@ -7,7 +7,6 @@ import (
 )
 
 func signup(writer http.ResponseWriter, request *http.Request) {
-	SetLogger()
 	generateHTML(writer, nil, "login.layout", "public.navbar", "signup")
 }
 
@@ -26,6 +25,10 @@ func signupAccount(writer http.ResponseWriter, request *http.Request) {
 		log.Fatal(err, "error: Cannot create user")
 	}
 	http.Redirect(writer, request, "/login", 302)
+}
+
+func login(writer http.ResponseWriter, request *http.Request) {
+	// TODO テンプレートを返す
 }
 
 func authenticate(writer http.ResponseWriter, request *http.Request) {
