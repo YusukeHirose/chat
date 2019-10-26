@@ -3,6 +3,8 @@ module chat
 go 1.12
 
 require (
+	github.com/comail/colog v0.0.0-20160416085026-fba8e7b1f46c
+	github.com/google/uuid v1.1.1
 	github.com/howeyc/fsnotify v0.9.0 // indirect
 	github.com/lib/pq v1.2.0
 	github.com/mattn/go-colorable v0.1.4 // indirect
