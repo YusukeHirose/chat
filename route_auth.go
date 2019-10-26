@@ -25,7 +25,6 @@ func signupAccount(writer http.ResponseWriter, request *http.Request) {
 	if err := user.Create(); err != nil {
 		log.Fatal(err, "error: Cannot create user")
 	}
-	// TODO user作成
 	http.Redirect(writer, request, "/login", 302)
 }
 
