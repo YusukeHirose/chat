@@ -13,7 +13,7 @@ func index(writer http.ResponseWriter, request *http.Request) {
 		_, err := session(writer, request)
 		if err != nil {
 			// TODO navbarをpublic用にする
-			generateHTML(writer, threads, "layout", "navbar", "index")
+			generateHTML(writer, threads, "layout", "public.navbar", "index")
 		} else {
 			// TODO navbarをprivate用にする
 			generateHTML(writer, threads, "layout", "navbar", "index")
