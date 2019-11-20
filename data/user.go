@@ -24,6 +24,8 @@ type Session struct {
 	CreatedAt time.Time
 }
 
+aaaa
+
 func UserByEmail(email string) (user User, err error) {
 	user = User{}
 	// TODO emailで検索
