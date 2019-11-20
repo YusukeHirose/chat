@@ -28,9 +28,8 @@ func signupAccount(writer http.ResponseWriter, request *http.Request) {
 }
 
 func login(writer http.ResponseWriter, request *http.Request) {
-	// TODO テンプレートを返す
 	t := parseTemplateFiles("login.layout", "public.navbar", "login")
-	t.Execute(writer, nil)
+	t.ExecuteTemplate(writer, "layout", nil)
 }
 
 func authenticate(writer http.ResponseWriter, request *http.Request) {

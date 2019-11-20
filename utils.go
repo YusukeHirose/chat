@@ -27,7 +27,7 @@ func parseTemplateFiles(filenames ...string) (t *template.Template) {
 	for _, file := range filenames {
 		files = append(files, fmt.Sprintf("templates/%s.html", file))
 	}
-	t = template.Must(template.ParseFiles(files...))
+	t = template.Must(t.ParseFiles(files...))
 	return
 }
 
